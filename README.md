@@ -1,5 +1,5 @@
 # Crack_Master
-A wrapper group of scripts for Hashcat: it can perform cracking operations by giving a user-friendly menu. This software is openly inspired by the TV Show "Mr. Robot". ![GitHub](https://img.shields.io/github/license/ente0v1/CrackMaster)
+A wrapper group of scripts for Hashcat: it can perform cracking operations by giving a user-friendly menu. ![GitHub](https://img.shields.io/github/license/ente0v1/CrackMaster)
 <!--
 ![Test Image](./assets/pennybags.png)
 -->
