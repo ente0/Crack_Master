@@ -62,8 +62,8 @@ To start the script log in as non-root user and rename your hash in `hash.txt`, 
 
 At the end of the cracking you will see the results inside `logs`, just open `status.txt` in the session folder.
 
-![Screenshot from 2024-05-27 02-56-37](https://github.com/ente0v1/Crack_Master/assets/156426041/fb8237c0-33b0-42ab-b3ed-2b8f9a1cd20c)
-
+<!--![Screenshot from 2024-05-27 02-56-37](https://github.com/ente0v1/Crack_Master/assets/156426041/fb8237c0-33b0-42ab-b3ed-2b8f9a1cd20c)
+-->
 ## Attacks
 
 ```
