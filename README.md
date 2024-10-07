@@ -3,7 +3,9 @@ A wrapper group of scripts for Hashcat: it can perform cracking operations by gi
 <!--
 ![Test Image](./assets/pennybags.png)
 -->
+<!--
 https://github.com/ente0v1/Crack_Master/assets/156426041/f085efaa-777b-40b3-8c82-a3ee1a8b360b
+-->
 
 ## Disclaimer
 This program is provided without warranties of any kind. The author assumes no responsibility for any damages resulting from the use of this software. We recommend that you use it only for lawful purposes and in accordance with local laws.
