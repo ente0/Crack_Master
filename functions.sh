@@ -37,7 +37,7 @@ define_windows_parameters() {
     default_workload="4"
     default_os="Linux"
     default_restorepath="$HOME/hashcat/sessions"
-    default_session="fsociety"
+    default_session=$(date +"%Y-%m-%d")
     default_wordlists="/c/Users/$USER/wordlists"
     default_masks="masks"
     default_rules="rules"
