@@ -83,4 +83,4 @@ workload=${workload_input:-$default_workload}
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
 echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 3 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$mask\" -d "$device""
 
-run_hashcat "$session" "$hashmode" "$mask" "$workload" "$status_timer"
+run_hashcat "$session" "$hashmode" "$mask" "$workload" "$status_timer" "$device"

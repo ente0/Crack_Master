@@ -108,4 +108,4 @@ device=${device_input:-$default_device}
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
 echo -e "${GREEN}Command >>${NC} \"$hashcat_path/hashcat.exe\" --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 6 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" \"$mask\" -d "$device""
 
-run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$mask_path" "$mask" "$min_length" "$max_length" "$workload" "$status_timer" "$hashcat_path"
+run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$mask_path" "$mask" "$min_length" "$max_length" "$workload" "$status_timer" "$hashcat_path" "$device"

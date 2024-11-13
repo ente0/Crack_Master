@@ -80,4 +80,4 @@ device=${device_input:-$default_device}
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
 echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" -m \"$hashmode\" hash.txt -a 0 -w $workload --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" -d "$device""
 
-run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$workload" "$status_timer"
+run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$workload" "$status_timer" "$device"
