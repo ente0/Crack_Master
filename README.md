@@ -41,8 +41,8 @@ sudo apt update && sudo apt install hashcat aircrack-ng hcxtools hcxdumptool git
   - **Git Bash**: For Linux-like terminal, install [Git Bash](https://git-scm.com/download/win)
   - **Optional**: For a full Linux environment, set up [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 
-#### Additional Resources:
-- Recommended wordlists, rules, and masks: [SecLists](https://github.com/danielmiessler/SecLists) and [wpa2-wordlists](https://github.com/kennyn510/wpa2-wordlists.git). Store them in `Crack_Master` under `wordlists`, `rules`, and `masks` folders.
+> [!TIP]
+> Recommended wordlists, rules, and masks: [SecLists](https://github.com/danielmiessler/SecLists) and [wpa2-wordlists](https://github.com/kennyn510/wpa2-wordlists.git). Store them in `Crack_Master` under `wordlists`, `rules`, and `masks` folders.
 
 ---
 
