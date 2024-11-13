@@ -10,7 +10,7 @@ define_colors() {
     BLUE='\033[0;34m'
     MAGENTA='\033[0;35m'
     CYAN='\033[0;36m'
-    NC='\033[0m' # No Color
+    NC='\033[0m'
 }
 
 define_default_parameters() {
@@ -70,8 +70,8 @@ random_color() {
 }
 
 show_title() {
-    option_color="${random_color}" 
-    echo -e "${random_color}"
+    color=$(random_color)
+    echo -e "${color}"
     cat <<EOF
 
 
@@ -97,27 +97,27 @@ EOF
 }
 
 show_windows_menu() {
-    echo -e "   ${option_color}Menu Options for Windows:${NC}"
-    echo -e "   ${option_color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
-    echo -e "   ${option_color}2.${NC} Crack with Association                                                        ${GREEN}[MEDIUM]"
-    echo -e "   ${option_color}3.${NC} Crack with Brute-Force                                                          ${YELLOW}[HARD]"
-    echo -e "   ${option_color}4.${NC} Crack with Combinator                                                       ${RED}[ADVANCED]"
+    echo -e "   ${color}Menu Options for Windows:${NC}"
+    echo -e "   ${color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
+    echo -e "   ${color}2.${NC} Crack with Association                                                        ${GREEN}[MEDIUM]"
+    echo -e "   ${color}3.${NC} Crack with Brute-Force                                                          ${YELLOW}[HARD]"
+    echo -e "   ${color}4.${NC} Crack with Combinator                                                       ${RED}[ADVANCED]"
     echo -e ""
     echo -e "                                                              ${option_color}Press Enter to switch to Linux.${NC}"
     echo -e "--------------------------------------------------------------------------------------------"
-    echo -ne "  ${option_color}Enter option (1-4, or Q to quit): ${NC}"
+    echo -ne "  ${color}Enter option (1-4, or Q to quit): ${NC}"
 }
 
 show_linux_menu() {
-    echo -e "   ${option_color}Menu Options for Linux:${NC}"
-    echo -e "   ${option_color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
-    echo -e "   ${option_color}2.${NC} Crack with Association                                                        ${GREEN}[MEDIUM]"
-    echo -e "   ${option_color}3.${NC} Crack with Brute-Force                                                          ${YELLOW}[HARD]"
-    echo -e "   ${option_color}4.${NC} Crack with Combinator                                                       ${RED}[ADVANCED]"
+    echo -e "   ${color}Menu Options for Linux:${NC}"
+    echo -e "   ${color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
+    echo -e "   ${color}2.${NC} Crack with Association                                                        ${GREEN}[MEDIUM]"
+    echo -e "   ${color}3.${NC} Crack with Brute-Force                                                          ${YELLOW}[HARD]"
+    echo -e "   ${color}4.${NC} Crack with Combinator                                                       ${RED}[ADVANCED]"
     echo -e ""
     echo -e "                                                            ${option_color}Press Enter to switch to Windows.${NC}"
     echo -e "--------------------------------------------------------------------------------------------"
-    echo -ne "  ${option_color}Enter option (1-4, or Q to quit): ${NC}"
+    echo -ne "  ${color}Enter option (1-4, or Q to quit): ${NC}"
 }
 
 show_menu_based_on_os() {
