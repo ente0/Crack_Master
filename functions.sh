@@ -70,8 +70,8 @@ random_color() {
 }
 
 show_title() {
-    option_color="${color}" 
-    echo -e "${color}"
+    option_color="${random_color}" 
+    echo -e "${random_color}"
     cat <<EOF
 
 
