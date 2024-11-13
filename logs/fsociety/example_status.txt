@@ -1,7 +1,0 @@
-
-Session: fsociety
-Wordlist: /home/pennybags/cracking/wordlists/rockyou.txt
-Mask: 
-Rule: 
-Hash: 47d6c26b4bc01779eb317033f0f2a2e0
-Plaintext: pennybags00
