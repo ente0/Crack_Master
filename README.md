@@ -75,7 +75,7 @@ For WPA2 cracking, capture the hash using the [4-way handshake method](https://w
    ```bash
    ./crackmaster.sh
    ```
-3. Cracking results will be stored in `logs/session/status.txt`.
+3. Cracking results will be stored in `logs/session.txt`.
 
 ### Attack Modes
 Crack_Master supports the following attack modes:
