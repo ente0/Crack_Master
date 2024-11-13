@@ -1,12 +1,4 @@
-Here’s a version of your README, formatted similarly to the `hashCrack` example:
-
----
-
-# Crack_Master: A Hashcat Wrapper
-
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/ea69ed0f-e870-4a32-90cd-6a3972eb71cb" />
-</p>
+# Crack_Master: A Bash Hashcat Wrapper
 
 ## Description
 
