@@ -62,11 +62,6 @@ sudo apt update && sudo apt install hashcat aircrack-ng hcxtools hcxdumptool git
    ./crackmaster.sh
    ```
 
-If you encounter any dependency issues, use the `check_dependencies.sh` script:
-```bash
-./check_dependencies.sh
-```
-
 ---
 
 ## Usage Overview
@@ -80,7 +75,7 @@ For WPA2 cracking, capture the hash using the [4-way handshake method](https://w
    ```bash
    ./crackmaster.sh
    ```
-3. Cracking results will be stored in `logs/status.txt`.
+3. Cracking results will be stored in `logs/session/status.txt`.
 
 ### Attack Modes
 Crack_Master supports the following attack modes:
