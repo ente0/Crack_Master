@@ -19,10 +19,8 @@ run_hashcat() {
         hashcat --session="$session" -m "$hashmode" hash.txt -a 0 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" | tee $temp_output
     fi
 
-    # Read the content of the temporary file into a variable
     hashcat_output=$(cat "$temp_output")
 
-    # Output the captured output
     echo "$hashcat_output"
 
     if echo "$hashcat_output" | grep -q "Cracked"; then
@@ -35,23 +33,19 @@ run_hashcat() {
         sleep 2
     fi
     
-    # Remove the temporary file
     rm "$temp_output"
 }
 
 
 source functions.sh
-#define_default_parameters
-define_my_parameters
+define_default_parameters
 define_colors
 
-# Restore session if requested
 list_sessions
 echo -e "\n${RED}Restore? (Enter restore file name or leave empty):${NC}"
 read restore_file_input
 restore_session "$restore_file_input"
 
-# Prompt user inputs
 echo -e "${MAGENTA}Enter session name (press Enter to use default '$default_session'):${NC}"
 read session_input
 session=${session_input:-$default_session}
@@ -67,12 +61,10 @@ echo -e "${MAGENTA}Enter Wordlist (press Enter to use default '$default_wordlist
 read wordlist_input
 wordlist=${wordlist_input:-$default_wordlist}
 
-# Prompt hash attack mode
 echo -e "${MAGENTA}Enter hash attack mode (press Enter to use default '22000'):${NC}"
 read hashmode_input
 hashmode=${hashmode_input:-$default_hashmode}
 
-# Prompt for workload
 echo -e "${MAGENTA}Enter workload (press Enter to use default '$default_workload') [1-4]:${NC}"
 read workload_input
 workload=${workload_input:-$default_workload}
@@ -81,9 +73,7 @@ echo -e "${MAGENTA}Use status timer? (press Enter to use default '$default_statu
 read status_timer_input
 status_timer=${status_timer_input:-$default_status_timer}
 
-# Print the hashcat command
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
 echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" -m \"$hashmode\" hash.txt -a 0 -w $workload --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\""
 
-# Execute hashcat with the specified wordlist
 run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$workload" "$status_timer"

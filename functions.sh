@@ -3,8 +3,6 @@
 default_scripts="$HOME/Crack_Master"
 default_windows_scripts="/c/Users/$USER/source/repos/ente0v1/Crack_Master/scripts/windows"
 
-
-# Function to define colors
 define_colors() {
     RED='\033[0;31m'
     GREEN='\033[0;32m'
@@ -15,7 +13,6 @@ define_colors() {
     NC='\033[0m' # No Color
 }
 
-# Function to define default parameters
 define_default_parameters() {
     default_hashcat="."
     default_status_timer="y"
@@ -52,26 +49,6 @@ define_windows_parameters() {
     default_hashmode="22000"
 }
 
-# Function to define customized parameters
-define_my_parameters() {
-    default_hashcat="."
-    default_status_timer="y"
-    default_workload="2"
-    default_os="Linux"
-    default_restorepath="$HOME/.local/share/hashcat/sessions"
-    default_session="fsociety"
-    default_wordlists="$HOME/cracking/wordlists"
-    default_masks="$HOME/cracking/masks"
-    default_rules="$HOME/cracking/rules"
-    default_wordlist="paroleitaliane/bruteforce.txt"
-    default_mask="?d?d?d?d"
-    default_rule="T0XlCv2.rule"
-    default_min_length="4"
-    default_max_length="16"
-    default_hashmode="22000"
-}
-
-# Function to list available sessions
 list_sessions () {
     echo -e "${GREEN}Available sessions:${NC}"
     restore_files=$(find "$default_restorepath" -name "*.restore" -exec basename {} \; | sed 's/\.restore$//')
@@ -82,21 +59,18 @@ list_sessions () {
     fi
 }
 
-# Function to clear the screen
 clear_screen() {
     clear
 }
 
-# Function to generate a random color
 random_color() {
     local colors=("$RED" "$MAGENTA" "$CYAN" "$BLUE" "$GREEN" "$YELLOW")
     local random_index=$((RANDOM % ${#colors[@]}))
     echo -e "${colors[$random_index]}"
 }
 
-# Function to display the menu
 show_title() {
-    option_color="${color}" # Use the same color for all options
+    option_color="${color}" 
     echo -e "${color}"
     cat <<EOF
 
@@ -122,7 +96,6 @@ show_title() {
 EOF
 }
 
-# Function to display the menu options for Windows
 show_windows_menu() {
     echo -e "   ${option_color}Menu Options for Windows:${NC}"
     echo -e "   ${option_color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
@@ -135,7 +108,6 @@ show_windows_menu() {
     echo -ne "  ${option_color}Enter option (1-4, or Q to quit): ${NC}"
 }
 
-# Function to display the menu options for Linux
 show_linux_menu() {
     echo -e "   ${option_color}Menu Options for Linux:${NC}"
     echo -e "   ${option_color}1.${NC} Crack with Wordlist                                                             ${CYAN}[EASY]"
@@ -148,7 +120,6 @@ show_linux_menu() {
     echo -ne "  ${option_color}Enter option (1-4, or Q to quit): ${NC}"
 }
 
-# Function to display the menu based on OS choice
 show_menu_based_on_os() {
     if [[ "$1" == "Linux" ]]; then
         show_linux_menu
@@ -171,7 +142,6 @@ animate_text() {
     done
 }
 
-# Function to handle the user's selected option
 handle_option() {
     local option="$1"
 
@@ -227,7 +197,6 @@ handle_option() {
             exit 0
             ;;
         [Xx])
-            # If the user selected option "Other Scripts", execute Windows scripts
             execute_windows_scripts
             ;;
         *)
@@ -236,15 +205,11 @@ handle_option() {
     esac
 }
 
-# Function to execute Windows scripts
 execute_windows_scripts() {
-    # Check if the Windows scripts directory exists
     if [[ -d "scripts/windows" ]]; then
-        # Loop through the Windows scripts directory and execute each script
         for script in "scripts/windows"; do
             if [[ -f "$script" ]]; then
                 echo "Executing Windows script: $script"
-                # Add code to execute Windows script
             fi
         done
     else

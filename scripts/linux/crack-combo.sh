@@ -2,7 +2,6 @@
 # Hybrid Wordlist + Mask
 # Example: hashcat -a 6 -m 0 example.hash example.dict ?a?a?a?a?a?a
 
-# Function to handle hashcat execution and check for success
 run_hashcat() {
     local session="$1"
     local hashmode="$2"
@@ -22,10 +21,8 @@ run_hashcat() {
         hashcat --session="$session" --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask" | tee $temp_output
     fi
 
-    # Read the content of the temporary file into a variable
     hashcat_output=$(cat "$temp_output")
 
-    # Output the captured output
     echo "$hashcat_output"
 
     if echo "$hashcat_output" | grep -q "Cracked"; then
@@ -38,23 +35,19 @@ run_hashcat() {
         sleep 2
     fi
     
-    # Remove the temporary file
     rm "$temp_output"
 }
 
 
 source functions.sh
-#define_default_parameters
-define_my_parameters
+define_default_parameters
 define_colors
 
-# Restore session if requested
 list_sessions
 echo -e "\n${RED}Restore? (Enter restore file name or leave empty):${NC}"
 read restore_file_input
 restore_session "$restore_file_input"
 
-# Prompt user inputs
 echo -e "${MAGENTA}Enter session name (press Enter to use default '$default_session'):${NC}"
 read session_input
 session=${session_input:-$default_session}
@@ -81,12 +74,10 @@ echo -e "${MAGENTA}Enter Mask (press Enter to use default '$default_mask'):${NC}
 read mask_input
 mask=${mask_input:-$default_mask}
 
-# Prompt for min length
 echo -e "${MAGENTA}Enter Minimum Length (press Enter to use default '$default_min_length'):${NC}"
 read min_length_input
 min_length=${min_length_input:-$default_min_length}
 
-# Prompt for max length
 echo -e "${MAGENTA}Enter Maximum Length (press Enter to use default '$default_max_length'):${NC}"
 read max_length_input
 max_length=${max_length_input:-$default_max_length}
@@ -95,19 +86,15 @@ echo -e "${MAGENTA}Use status timer? (press Enter to use default '$default_statu
 read status_timer_input
 status_timer=${status_timer_input:-$default_status_timer}
 
-# Prompt hash attack mode
 echo -e "${MAGENTA}Enter hash attack mode (press Enter to use default '22000'):${NC}"
 read hashmode_input
 hashmode=${hashmode_input:-$default_hashmode}
 
-# Prompt for workload
 echo -e "${MAGENTA}Enter workload (press Enter to use default '$default_workload') [1-4]:${NC}"
 read workload_input
 workload=${workload_input:-$default_workload}
 
-# Print the hashcat command
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
 echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 6 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" \"$mask\""
 
-# Execute hashcat with combined attack (wordlist + mask) and increment options
 run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$mask" "$workload" "$status_timer" "$min_length" "$max_length"
