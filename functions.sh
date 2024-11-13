@@ -252,7 +252,6 @@ execute_windows_scripts() {
     fi
 }
 
-# Function to save successful settings
 save_settings() {
     local session="$1"
     local path_wordlists="$2"
@@ -270,7 +269,6 @@ save_settings() {
     status+="\nPlaintext: $(cat $plaintext_file)"
 }
 
-# Function to handle session restoration
 restore_session() {
     local restore_file_input="$1"
     if [ -n "$restore_file_input" ]; then
@@ -288,7 +286,6 @@ restore_session() {
     fi
 }
 
-# Function to save all the results
 save_logs() {
     mkdir "$session"
     mv "$session" logs

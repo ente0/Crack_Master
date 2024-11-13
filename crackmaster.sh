@@ -2,7 +2,6 @@
 
 # Source the functions library
 source functions.sh
-source fsociety00.dat
 
 # Define parameters
 #define_default_parameters
@@ -16,7 +15,6 @@ counter=1  # Counter variable
 # Loop to keep displaying the menu and handling options until the user chooses to quit
 while true; do
     clear_screen
-    show_pennybags
     show_title
     show_menu_based_on_os "$default_os"  # Show menu based on current OS selection
     read -r user_option  # Read user input
