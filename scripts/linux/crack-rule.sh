@@ -11,13 +11,14 @@ run_hashcat() {
     local rule="$6"
     local workload="$7"
     local status_timer="$8"
+    local device="$9"
 
     temp_output=$(mktemp)
 
     if [ "$status_timer" = "y" ]; then
-        hashcat --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 0 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" -r "$rule_path/$rule" | tee $temp_output
+        hashcat --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 0 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" -r "$rule_path/$rule" -d "$device" | tee $temp_output
     else
-        hashcat --session="$session" -m "$hashmode" hash.txt -a 0 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" -r "$rule_path/$rule" | tee $temp_output
+        hashcat --session="$session" -m "$hashmode" hash.txt -a 0 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" -r "$rule_path/$rule" -d "$device" | tee $temp_output
     fi
 
     hashcat_output=$(cat "$temp_output")
@@ -85,7 +86,11 @@ echo -e "${MAGENTA}Use status timer? (press Enter to use default '$default_statu
 read status_timer_input
 status_timer=${status_timer_input:-$default_status_timer}
 
+echo -e "${MAGENTA}Enter device (press Enter to use default '$default_device'):${NC}"
+read device_input
+device=${device_input:-$default_device}
+
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
-echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" -m \"$hashmode\" hash.txt -a 0 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" -r \"$rule_path/$rule\""
+echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" -m \"$hashmode\" hash.txt -a 0 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" -r \"$rule_path/$rule\" -d "$device""
 
 run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$rule_path" "$rule" "$workload" "$status_timer"

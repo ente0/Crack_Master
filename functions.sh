@@ -23,12 +23,13 @@ define_default_parameters() {
     default_wordlists="wordlists"
     default_masks="masks"
     default_rules="rules"
-    default_wordlist="dnsmap.txt"
+    default_wordlist="rockyou.txt"
     default_mask="?d?d?d?d"
     default_rule="T0XlCv2.rule"
     default_min_length="4"
     default_max_length="16"
     default_hashmode="22000"
+    default_device="2"
 }
 
 define_windows_parameters() {
@@ -47,6 +48,7 @@ define_windows_parameters() {
     default_min_length="4"
     default_max_length="16"
     default_hashmode="22000"
+    default_device="2"
 }
 
 list_sessions () {

@@ -14,13 +14,14 @@ run_hashcat() {
     local workload="$9"
     local status_timer="${10}"
     local hashcat_path="${11}"
+    local device="${12}"
 
     temp_output=$(mktemp)
 
     if [ "$status_timer" = "y" ]; then
-        "$hashcat_path/hashcat.exe" --session="$session" --status --status-timer=2 --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask_path/$mask" | tee $temp_output
+        "$hashcat_path/hashcat.exe" --session="$session" --status --status-timer=2 --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask_path/$mask" -d "$device" | tee $temp_output
     else
-        "$hashcat_path/hashcat.exe" --session="$session" --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask_path/$mask" | tee $temp_output
+        "$hashcat_path/hashcat.exe" --session="$session" --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask_path/$mask" -d "$device" | tee $temp_output
     fi
 
     hashcat_output=$(cat "$temp_output")
@@ -100,7 +101,11 @@ echo -e "${MAGENTA}Enter workload (press Enter to use default '$default_workload
 read workload_input
 workload=${workload_input:-$default_workload}
 
+echo -e "${MAGENTA}Enter device (press Enter to use default '$default_device'):${NC}"
+read device_input
+device=${device_input:-$default_device}
+
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
-echo -e "${GREEN}Command >>${NC} \"$hashcat_path/hashcat.exe\" --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 6 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" \"$mask\""
+echo -e "${GREEN}Command >>${NC} \"$hashcat_path/hashcat.exe\" --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 6 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$wordlist_path/$wordlist\" \"$mask\" -d "$device""
 
 run_hashcat "$session" "$hashmode" "$wordlist_path" "$wordlist" "$mask_path" "$mask" "$min_length" "$max_length" "$workload" "$status_timer" "$hashcat_path"

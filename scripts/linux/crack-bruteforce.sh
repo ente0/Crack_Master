@@ -8,13 +8,15 @@ run_hashcat() {
     local mask="$3"
     local workload="$4"
     local status_timer="$5"
+    local device="$6"
+
 
     temp_output=$(mktemp)
 
     if [ "$status_timer" = "y" ]; then
-        hashcat --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" | tee $temp_output
+        hashcat --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" -d "$device" | tee $temp_output
     else
-        hashcat --session="$session" -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" | tee $temp_output
+        hashcat --session="$session" -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" -d "$device" | tee $temp_output
     fi
 
     hashcat_output=$(cat "$temp_output")
@@ -79,6 +81,6 @@ read workload_input
 workload=${workload_input:-$default_workload}
 
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
-echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 3 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$mask\""
+echo -e "${GREEN}Command >>${NC} hashcat --session=\"$session\" --increment --increment-min=\"$min_length\" --increment-max=\"$max_length\" -m \"$hashmode\" hash.txt -a 3 -w \"$workload\" --outfile-format=2 -o plaintext.txt \"$mask\" -d "$device""
 
 run_hashcat "$session" "$hashmode" "$mask" "$workload" "$status_timer"

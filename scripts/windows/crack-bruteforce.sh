@@ -9,13 +9,14 @@ run_hashcat() {
     local workload="$4"
     local status_timer="$5"
     local hashcat_path="$6"
+    local device="$7"
     
     temp_output=$(mktemp)
 
     if [ "$status_timer" = "y" ]; then
-        "$hashcat_path/hashcat.exe" --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" | tee $temp_output
+        "$hashcat_path/hashcat.exe" --session="$session" --status --status-timer=2 -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" -d "$device" | tee $temp_output
     else
-        "$hashcat_path/hashcat.exe" --session="$session" -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" | tee $temp_output
+        "$hashcat_path/hashcat.exe" --session="$session" -m "$hashmode" hash.txt -a 3 -w "$workload" --outfile-format=2 -o plaintext.txt "$mask" -d "$device" | tee $temp_output
     fi
 
     hashcat_output=$(cat "$temp_output")
@@ -80,8 +81,12 @@ echo -e "${MAGENTA}Use status timer? (press Enter to use default '$default_statu
 read status_timer_input
 status_timer=${status_timer_input:-default_status_timer}
 
+echo -e "${MAGENTA}Enter device (press Enter to use default '$default_device'):${NC}"
+read device_input
+device=${device_input:-$default_device}
+
 echo -e "${GREEN}Restore >>${NC} $default_restorepath/$session"
-echo -e "${GREEN}Command >>${NC} hashcat.exe --session="$session" --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask""
+echo -e "${GREEN}Command >>${NC} hashcat.exe --session="$session" --increment --increment-min="$min_length" --increment-max="$max_length" -m "$hashmode" hash.txt -a 6 -w "$workload" --outfile-format=2 -o plaintext.txt "$wordlist_path/$wordlist" "$mask" -d "$device""
 
 run_hashcat "$session" "$hashmode" "$mask" "$workload" "$status_timer" "$hashcat_path"
 
