@@ -2,7 +2,6 @@
 # Wordlist
 # Example: hashcat -a 0 -m 0 example.hash example.dict
 
-# Function to handle hashcat execution and check for success
 run_hashcat() {
     local session="$1"
     local hashmode="$2"
