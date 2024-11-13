@@ -1,0 +1,6 @@
+.vscode/
+.vs/
+.github/
+.git/
+logs/*
+!logs/fsociety/
