@@ -92,7 +92,14 @@ Capture WPA2 hashes using the [4-way handshake method](https://www.youtube.com/w
 3. Cracking results are saved in `logs/session.txt`.
 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" type="video/mp4" />
+  <video controls>
+    <source src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+<p align="center">
+  <em>Watch this demo video!</em>
 </p>
 
 ### Attack Modes
