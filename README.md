@@ -21,9 +21,7 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
 - Cross-platform compatibility (Linux and Windows).
 
 ## Installation & Setup
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" />
-</p>
+
 ### Requirements
 
 #### Linux:
@@ -107,7 +105,9 @@ Crack_Master supports the following attack modes:
 ---
 
 ## Menu Options
-
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" />
+</p>
 The main menu offers easy access to various cracking methods:
 | Option | Description                | Script |
 |--------|----------------------------|--------|
