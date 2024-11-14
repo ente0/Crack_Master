@@ -1,9 +1,8 @@
-<!--
 <p align="center">
-  <img src="" />
+  <img src="https://github.com/user-attachments/assets/88176319-5a4d-4162-a3c3-cf45e4f7a9c5" />
 </p>
--->
-# Crack_Master: A Bash Hashcat Wrapper
+
+# Crack_Master
 
 ## Description
 
