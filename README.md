@@ -108,6 +108,7 @@ Crack_Master supports the following attack modes:
 <p align="center">
   <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" />
 </p>
+
 The main menu offers easy access to various cracking methods:
 | Option | Description                | Script |
 |--------|----------------------------|--------|
