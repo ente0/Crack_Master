@@ -78,7 +78,6 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
 <p align="center">
   <video src="https://github.com/user-attachments/assets/c756c4cd-6d22-4c49-a4aa-91fe07dda5d4" />
 </p>
----
 
 ## Usage Overview
 
