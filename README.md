@@ -75,6 +75,9 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
    ./crackmaster.sh
    ```
 
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/c756c4cd-6d22-4c49-a4aa-91fe07dda5d4" />
+</p>
 ---
 
 ## Usage Overview
@@ -89,10 +92,6 @@ Capture WPA2 hashes using the [4-way handshake method](https://www.youtube.com/w
    ./crackmaster.sh
    ```
 3. Cracking results are saved in `logs/session.txt`.
-
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/c756c4cd-6d22-4c49-a4aa-91fe07dda5d4" />
-</p>
 
 ### Attack Modes
 Crack_Master supports the following attack modes:
