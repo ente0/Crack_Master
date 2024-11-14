@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8d82f11b-aee2-4d84-80ab-d75cf65ba92f" />
+  <img src="" />
 </p>
 
 # Crack_Master: A Bash Hashcat Wrapper
