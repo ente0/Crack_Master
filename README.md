@@ -1,8 +1,8 @@
-
+<!--
 <p align="center">
   <img src="" />
 </p>
-
+-->
 # Crack_Master: A Bash Hashcat Wrapper
 
 ## Description
