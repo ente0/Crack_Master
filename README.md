@@ -91,6 +91,10 @@ Capture WPA2 hashes using the [4-way handshake method](https://www.youtube.com/w
    ```
 3. Cracking results are saved in `logs/session.txt`.
 
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" />
+</p>
+
 ### Attack Modes
 Crack_Master supports the following attack modes:
 | # | Mode                 | Description                                                                                   |
@@ -105,10 +109,6 @@ Crack_Master supports the following attack modes:
 ---
 
 ## Menu Options
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/d1d129df-9ed3-412f-9d64-0432a074e863" />
-</p>
-
 The main menu offers easy access to various cracking methods:
 | Option | Description                | Script |
 |--------|----------------------------|--------|
