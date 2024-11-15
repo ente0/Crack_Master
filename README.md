@@ -4,8 +4,6 @@
 
 # Crack_Master
 
-## Description
-
 Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a streamlined, user-friendly interface for password-cracking tasks. This tool enables users to conduct various attack types—including wordlist, rule-based, brute-force, and hybrid attacks—through an intuitive, menu-driven interface. ![GitHub License](https://img.shields.io/github/license/ente0v1/Crack_Master)
 
 > [!CAUTION]
