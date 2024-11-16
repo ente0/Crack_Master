@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4def3e51-52b4-4fa0-872f-c8fbbb554c60" />
+  <img src="https://github.com/user-attachments/assets/84ed25bb-fe03-48df-9061-e8e09d800a09" />
 </p>
+
 
 # Crack_Master
 
