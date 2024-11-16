@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9d97fb95-2dc2-44c9-bfb8-0f211cf7f0a2" />
+  <img src="https://github.com/user-attachments/assets/4def3e51-52b4-4fa0-872f-c8fbbb554c60" />
 </p>
 
 # Crack_Master
