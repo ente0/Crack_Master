@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/84ed25bb-fe03-48df-9061-e8e09d800a09" />
+  <img src="https://github.com/user-attachments/assets/2b2282ec-ac2e-4d16-9530-03c49b359f41" />
 </p>
 
 A Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a streamlined, user-friendly interface for password-cracking tasks. This tool enables users to conduct various attack types—including wordlist, rule-based, brute-force, and hybrid attacks—through an intuitive, menu-driven interface. ![GitHub License](https://img.shields.io/github/license/ente0v1/Crack_Master)
