@@ -133,32 +133,6 @@ The `crackmaster.sh` script performs the following tasks:
 
 ---
 
-## Wordlist Manipulation Commands
-
-Common bash commands for handling wordlists:
-- **Remove duplicates**:
-  ```bash
-  awk '!(count[$0]++)' old.txt > new.txt
-  ```
-- **Sort by length**:
-  ```bash
-  awk '{print length, $0}' old.txt | sort -n | cut -d " " -f2- > new.txt
-  ```
-- **Sort alphabetically**:
-  ```bash
-  sort old.txt | uniq > new.txt
-  ```
-- **Merge files**:
-  ```bash
-  cat file1.txt file2.txt > combined.txt
-  ```
-- **Remove blank lines**:
-  ```bash
-  egrep -v "^[[:space:]]*$" old.txt > new.txt
-  ```
-
----
-
 ## Help
 For more resources, consider the following repositories:
 - [wpa2-wordlists](https://github.com/kennyn510/wpa2-wordlists.git)
