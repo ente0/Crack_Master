@@ -57,7 +57,12 @@ A Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a s
    git clone --depth 1 https://github.com/ente0v1/Crack_Master.git
    cd Crack_Master
    ```
-2. **(Optional) Download default wordlists and rules**:
+2. **Run Crack_Master**:
+   ```bash
+   ./crackmaster.sh
+   ```
+>[!TIP]
+> **(Optional) Download default wordlists and rules**:
    ```bash
    git clone https://github.com/ente0v1/hashcat-defaults
    git lfs install
@@ -66,11 +71,6 @@ A Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a s
    cp -rf hashcat-defaults/* .
    sudo rm -r hashcat-defaults
    ```
-3. **Run Crack_Master**:
-   ```bash
-   ./crackmaster.sh
-   ```
-
 <p align="center">
   <video src="https://github.com/user-attachments/assets/c756c4cd-6d22-4c49-a4aa-91fe07dda5d4" />
 </p>
@@ -108,7 +108,7 @@ The main menu offers easy access to various cracking methods:
 | 1 (Mode 0) | Crack with Wordlist        | Executes wordlist-based cracking |
 | 2 (Mode 9) | Crack with Rules           | Executes rule-based cracking |
 | 3 (Mode 3) | Crack with Brute-Force     | Executes brute-force cracking |
-| 4 (Mode 7) | Crack with Combinator      | Executes hybrid wordlist + mask cracking |
+| 4 (Mode 6) | Crack with Combinator      | Executes hybrid wordlist + mask cracking |
 | Q          | Quit                       | Saves settings and logs, then exits |
 
 ### Example Commands
