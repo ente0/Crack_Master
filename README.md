@@ -119,6 +119,33 @@ hashcat -a 3 -m 0 example0.hash ?a?a?a?a?a?a                  # Brute-Force
 hashcat -a 1 -m 0 example0.hash example.dict example.dict     # Combination
 hashcat -a 9 -m 500 example500.hash 1word.dict -r best64.rule # Association
 ```
+---
+## Troubleshooting Hashcat Issues
+
+If you encounter errors when running Hashcat, you can follow these steps to troubleshoot:
+
+1. **Test Hashcat Functionality**:
+   First, run a benchmark test to ensure that Hashcat is working properly:
+   ```bash
+   hashcat -b
+   ```
+   This command will perform a benchmark on your system to check Hashcat's overall functionality. If this command works without issues, Hashcat is likely properly installed.
+
+2. **Check Available Devices**:
+   To verify that Hashcat can detect your devices (such as GPUs) for cracking, use the following command:
+   ```bash
+   hashcat -I
+   ```
+   This command will list the available devices. Ensure that the correct devices are listed for use in cracking.
+
+3. **Check for Errors in Hashcat**:
+   If the cracking process fails or Hashcat doesn't seem to recognize your devices, running the above tests should help identify potential problems with your system configuration, such as missing or incompatible drivers.
+
+4. **Permissions**:
+   If you encounter permission issues (especially on Linux), consider running Hashcat with elevated privileges or configuring your user group correctly for GPU access. You can run Hashcat with `sudo` if necessary:
+   ```bash
+   sudo hashcat -b
+   ```
 
 ---
 
