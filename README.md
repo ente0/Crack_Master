@@ -104,12 +104,12 @@ Crack_Master supports the following attack modes:
 ## Menu Options
 The main menu offers easy access to various cracking methods:
 | Option | Description                | Script |
-|--------|----------------------------|--------|
-| 1      | Crack with Wordlist        | Executes wordlist-based cracking |
-| 2      | Crack with Rules           | Executes rule-based cracking |
-| 3      | Crack with Brute-Force     | Executes brute-force cracking |
-| 4      | Crack with Combinator      | Executes combinator cracking |
-| Q      | Quit                       | Saves settings and logs, then exits |
+|------------|----------------------------|--------|
+| 1 (Mode 0) | Crack with Wordlist        | Executes wordlist-based cracking |
+| 2 (Mode 9) | Crack with Rules           | Executes rule-based cracking |
+| 3 (Mode 3) | Crack with Brute-Force     | Executes brute-force cracking |
+| 4 (Mode 7) | Crack with Combinator      | Executes combinator cracking |
+| Q          | Quit                       | Saves settings and logs, then exits |
 
 ### Example Commands
 ```bash
