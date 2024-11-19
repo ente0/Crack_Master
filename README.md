@@ -57,7 +57,7 @@ A Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a s
    git clone --depth 1 https://github.com/ente0v1/Crack_Master.git
    cd Crack_Master
    ```
-2. **Download default wordlists and rules**:
+2. **(Optional) Download default wordlists and rules**:
    ```bash
    git clone https://github.com/ente0v1/hashcat-defaults
    git lfs install
