@@ -75,6 +75,10 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
   <video src="https://github.com/user-attachments/assets/c756c4cd-6d22-4c49-a4aa-91fe07dda5d4" />
 </p>
 
+
+## Latest Releases
+For the latest release versions of hashCrack, visit the [hashCrack Releases](https://github.com/ente0v1/Crack_Master/releases) page.
+
 ## Usage Overview
 
 ### Capturing WPA2 Hashes
