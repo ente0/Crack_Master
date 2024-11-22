@@ -55,10 +55,14 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
 1. **Clone the repository**:
    ```bash
    git clone --depth 1 https://github.com/ente0v1/Crack_Master.git
-   cd Crack_Master
    ```
-2. **Run Crack_Master**:
+2. **Place the hash**:
    ```bash
+   mv hash.txt Crack_Master
+   ```
+3. **Run Crack_Master**:
+   ```bash
+   cd Crack_Master
    ./crackmaster.sh
    ```
 
@@ -78,7 +82,7 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
    ```
 
 ## Latest Releases
-For the latest release versions of hashCrack, visit the [hashCrack Releases](https://github.com/ente0v1/Crack_Master/releases) page.
+For the latest release versions of hashCrack, visit the [Crack_Master Releases](https://github.com/ente0v1/Crack_Master/releases) page.
 
 ## Usage Overview
 
