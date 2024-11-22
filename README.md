@@ -58,7 +58,7 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
    ```
 2. **Place the hash**:
    ```bash
-   mv hash.txt Crack_Master
+   cp hash.txt Crack_Master
    ```
 3. **Run Crack_Master**:
    ```bash
