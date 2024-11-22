@@ -165,7 +165,12 @@ The `crackmaster.sh` script performs the following tasks:
 
 ---
 
-## Help
+### Support
+
+To report bugs, issues, or feature requests, please open a new issue on [GitHub Issues](https://github.com/ente0/Crack_Master/issues).
+
+For further questions or assistance, contact us via [email](mailto:enteo.dev@protonmail.com).
+
 For more resources, consider the following repositories:
 - [hashcat-defaults](https://github.com/ente0v1/hashcat-defaults)
 - [wpa2-wordlists](https://github.com/kennyn510/wpa2-wordlists.git)
