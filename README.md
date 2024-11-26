@@ -2,6 +2,18 @@
   <img src="https://github.com/user-attachments/assets/a5991aae-eb93-4e92-acf8-73c05cba4be9" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/ente0/Crack_Master">
+  <img src="https://img.shields.io/badge/language-python-green" alt="Language: Shell">
+  
+  <img src="https://img.shields.io/badge/dependencies-hashcat-green" alt="Dependencies">
+  
+  <a href="https://github.com/ente0/hashCrack/releases">
+    <img src="https://img.shields.io/badge/build-v1.4.1-blue" alt="Build Version">
+  </a>
+
+</p>
+
 Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/) that offers a streamlined, user-friendly interface for password-cracking tasks. This tool enables users to conduct various attack types—including wordlist, rule-based, brute-force, and hybrid attacks—through an intuitive, menu-driven interface. ![GitHub License](https://img.shields.io/github/license/ente0v1/Crack_Master)
 
 > [!CAUTION]
