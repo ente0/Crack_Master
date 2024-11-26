@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/license/ente0/Crack_Master">
-  <img src="https://img.shields.io/badge/language-python-green" alt="Language: Shell">
+  <img src="https://img.shields.io/badge/language-shell-green" alt="Language: Shell">
   
   <img src="https://img.shields.io/badge/dependencies-hashcat-green" alt="Dependencies">
   
