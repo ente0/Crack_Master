@@ -54,7 +54,7 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
 ### Clone and Run Crack_Master
 1. **Clone the repository**:
    ```bash
-   git clone --depth 1 https://github.com/ente0v1/Crack_Master.git
+   git clone --depth 1 https://github.com/ente0/Crack_Master.git
    ```
 2. **Place the hash**:
    ```bash
@@ -73,7 +73,7 @@ Crack_Master is a Bash-based wrapper for [Hashcat](https://hashcat.net/hashcat/)
 >[!TIP]
 > **(Optional) Download default wordlists and rules**:
    ```bash
-   git clone https://github.com/ente0v1/hashcat-defaults
+   git clone https://github.com/ente0/hashcat-defaults
    git lfs install
    git pull
    cd ..
