@@ -8,7 +8,7 @@
   
   <img src="https://img.shields.io/badge/dependencies-hashcat-green" alt="Dependencies">
   
-  <a href="https://github.com/ente0/hashCrack/releases">
+  <a href="https://github.com/ente0/Crack_Master/releases">
     <img src="https://img.shields.io/badge/build-v1.4.1-blue" alt="Build Version">
   </a>
 
