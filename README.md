@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/github/license/ente0/Crack_Master">
   <img src="https://img.shields.io/badge/language-shell-green" alt="Language: Shell">
   
-  <img src="https://img.shields.io/badge/dependencies-hashcat--aircrack-ng--hcxtools--hcxdumptool-green" alt="Dependencies">
+  <img src="https://img.shields.io/badge/dependencies-hashcat--aircrack-ng--hcxtools--hcxdumptool-green">
   
   <a href="https://github.com/ente0/Crack_Master/releases">
     <img src="https://img.shields.io/badge/build-v1.4.1-blue" alt="Build Version">
