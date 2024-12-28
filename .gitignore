@@ -3,4 +3,3 @@
 .github/
 .git/
 logs/*
-!logs/fsociety/
