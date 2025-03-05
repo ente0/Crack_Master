@@ -19,6 +19,7 @@
   </a>
 
 </p>
+
 ### **A Shell-based wrapper for [Hashcat](https://hashcat.net/hashcat/), that offers a streamlined, user-friendly interface for password-cracking tasks. This tool enables users to conduct various attack types—including wordlist, rule-based, brute-force, and hybrid attacks—through an intuitive, menu-driven interface.** 
 
 </div>
