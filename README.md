@@ -1,7 +1,14 @@
+<!--
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3354a13f-45ad-4528-b2dd-0ba6dc50c5b6" />
 </p>
+-->
 
+
+
+<div align="center">
+  
+# Crack_Master: Automate Hashcat
 <p align="center">
   <img src="https://img.shields.io/github/license/ente0/Crack_Master">
   <img src="https://img.shields.io/badge/language-shell-green" alt="Language: Shell">
@@ -12,12 +19,6 @@
   </a>
 
 </p>
-
-
-<div align="center">
-  
-# Crack_Master: Automate Hashcat
-
 ### **A Shell-based wrapper for [Hashcat](https://hashcat.net/hashcat/), that offers a streamlined, user-friendly interface for password-cracking tasks. This tool enables users to conduct various attack types—including wordlist, rule-based, brute-force, and hybrid attacks—through an intuitive, menu-driven interface.** 
 
 </div>
