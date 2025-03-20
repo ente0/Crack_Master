@@ -8,7 +8,7 @@
 
 <div align="center">
   
-# Crack_Master: Automate Hashcat
+# Crack_Master: Automate Hashcat (deprecated)
 <p align="center">
   <img src="https://img.shields.io/github/license/ente0/Crack_Master">
   <img src="https://img.shields.io/badge/language-shell-green" alt="Language: Shell">
